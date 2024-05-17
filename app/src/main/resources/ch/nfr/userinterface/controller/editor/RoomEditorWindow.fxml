@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.nfr.userinterface.controller.editor.RoomEditorController">
+   <children>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+         <children>
+            <Pane prefWidth="90.0">
+               <children>
+                  <Label prefHeight="25.6" text="Raum Typ:" />
+               </children>
+            </Pane>
+            <ChoiceBox fx:id="roomType" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+         <children>
+            <Pane prefWidth="90.0">
+               <children>
+                  <Label prefHeight="25.6" text="Raum Name:" />
+               </children>
+            </Pane>
+            <TextField fx:id="roomName" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+         <children>
+            <Pane prefWidth="90.0">
+               <children>
+                  <Label prefHeight="25.6" text="Fläche:" />
+               </children>
+            </Pane>
+            <TextField fx:id="area" alignment="CENTER_RIGHT" prefWidth="150.0" />
+            <Label prefHeight="25.6" text="in m²">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="errorOutput" alignment="CENTER" minHeight="17.6" minWidth="50.0" textFill="RED">
+         <VBox.margin>
+            <Insets bottom="-5.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="75.0" text="Abbrechen" />
+            <Button mnemonicParsing="false" onAction="#save" prefWidth="75.0" text="Speichern" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+   </padding>
+</VBox>
